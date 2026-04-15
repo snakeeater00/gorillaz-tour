@@ -9,17 +9,21 @@ html {
     scroll-behavior: smooth;
 }
 
+/* чтобы якоря не прятались под фиксированный header */
 section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 90px;
 }
 
-/* header */
+/* HEADER */
 
 .header {
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
     background: rgba(0,0,0,0.8);
     backdrop-filter: blur(8px);
+    z-index: 1000;
 }
 
 .nav {
@@ -30,7 +34,7 @@ section {
 }
 
 .logo {
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', sans-serif;
     color: #9cff00;
     font-size: 28px;
 }
@@ -39,6 +43,8 @@ section {
     display: flex;
     gap: 30px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .menu li {
@@ -49,7 +55,7 @@ section {
     transform: translateY(-6px);
 }
 
-.menu li a {
+.menu a {
     text-decoration: none;
     color: white;
 }
@@ -67,7 +73,7 @@ section {
     transform: translateY(-6px);
 }
 
-/* hero */
+/* HERO */
 
 .hero {
     height: 100vh;
@@ -76,16 +82,11 @@ section {
     padding-left: 80px;
 
     background-image:
-        linear-gradient(
-            to right,
-            rgba(0,0,0,0.75),
-            rgba(0,0,0,0.2)
-        ),
+        linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.2)),
         url("imgmain.jpg");
 
     background-size: cover;
     background-position: right center;
-    background-repeat: no-repeat;
 }
 
 .hero-content {
@@ -98,7 +99,7 @@ section {
 }
 
 .hero h1 {
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 140px;
     color: #9cff00;
     margin: 10px 0;
@@ -143,7 +144,7 @@ section {
     transform: translateY(-6px);
 }
 
-/* info bar */
+/* INFO */
 
 .info-bar {
     display: flex;
@@ -151,12 +152,13 @@ section {
     align-items: center;
     background: #0c0c0c;
     padding: 30px;
+    flex-wrap: wrap;
 }
 
 .info-item {
     text-align: center;
     position: relative;
-    padding: 0 40px;
+    padding: 10px 40px;
 }
 
 .info-item h3 {
@@ -175,20 +177,21 @@ section {
     background: rgba(255,255,255,0.2);
 }
 
-/* gallery */
+/* GALLERY */
 
 .gallery {
     padding: 60px;
 }
 
 .gallery h2 {
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 50px;
     color: #9cff00;
 }
 
 .gallery-grid {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
 }
@@ -212,7 +215,7 @@ section {
     transform: translateY(-8px);
 }
 
-/* contacts */
+/* CONTACTS */
 
 .contacts {
     text-align: center;
@@ -221,20 +224,18 @@ section {
 }
 
 .contacts h2 {
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 34px;
-    color: white;
 }
 
 .contacts address {
     margin-top: 20px;
     font-style: normal;
-    color: white;
     opacity: 0.8;
     line-height: 1.8;
 }
 
-/* footer */
+/* FOOTER */
 
 .footer {
     text-align: center;
